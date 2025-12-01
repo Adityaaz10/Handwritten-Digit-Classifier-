@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handwritten Digit Classifier</title>
+    
+    <!-- Import TensorFlow.js and Visualization Library -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.18.0/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis@1.5.1/dist/tfjs-vis.umd.min.js"></script>
+    
+    <!-- Import Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main-container">
+        <h1>Handwritten Digit Classifier (CNN)</h1>
+        
+        <div class="status-bar" id="statusMsg">Initializing...</div>
+
+        <div class="control-panel">
+            <button id="trainBtn" disabled>Train Model (15 Epochs)</button>
+        </div>
+
+        <div class="draw-section">
+            <h2>Test with New Input</h2>
+            <p>Draw a digit (0-9) inside the $280 \times 280$ black box below:</p>
+            
+            <canvas id="drawCanvas" width="280" height="280"></canvas>
+            
+            <div class="control-panel">
+                <button id="clearBtn" disabled>Clear Drawing</button>
+                <button id="predictBtn" disabled>Predict Drawing</button>
+            </div>
+            
+            <div class="prediction-result" id="predictionResult"></div>
+        </div>
+    </div>
+
+    <!-- Import Data Utility -->
+    <script src="mnist_data.js"></script>
+    <!-- Import ML model -->
+    <script src="script.js"></script>
+
+</body>
+</html>

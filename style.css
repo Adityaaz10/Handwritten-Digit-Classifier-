@@ -1,0 +1,78 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.main-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    max-width: 800px;
+    width: 100%;
+}
+
+h1 { text-align: center; color: #2c3e50; }
+h2 { color: #34495e; border-bottom: 2px solid #ecf0f1; padding-bottom: 10px; margin-top: 30px; }
+
+.status-bar {
+    background: #e8f4fd;
+    color: #2980b9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.control-panel {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.2s;
+}
+
+button:hover { background-color: #2980b9; }
+button:disabled { background-color: #bdc3c7; cursor: not-allowed; }
+
+/* Drawing Canvas Styles */
+.draw-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+canvas#drawCanvas {
+    border: 4px solid #2c3e50;
+    border-radius: 4px;
+    background-color: black; /* MNIST uses white text on black bg */
+    cursor: crosshair;
+}
+
+.prediction-result {
+    font-size: 24px;
+    font-weight: bold;
+    color: #27ae60;
+    height: 40px;
+}
+
+.tfjs-visor-container {
+    z-index: 1000 !important; /* Ensure charts are visible */
+}
