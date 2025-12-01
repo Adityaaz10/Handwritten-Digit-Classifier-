@@ -1,4 +1,4 @@
-#Full-Stack Handwritten Digit Classifier (MNIST)
+##Full-Stack Handwritten Digit Classifier (MNIST)
 
 Deep Learning Model Deployed in the Browser using TensorFlow.js
 
